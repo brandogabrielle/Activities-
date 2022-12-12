@@ -1,0 +1,46 @@
+<html>
+	<head>
+	<title>Forms</title>
+	</head>
+	<body bgcolor="gray">
+	<form action="responsive layout.html">
+	<fieldset>
+	<legend> Primary Information </legend>
+	First Name: <input type="text" name="fname" placeholder="First Name here" required> <br>
+	Last Name: <input type="text" name="lname" placeholder="Last Name here" required> <br>
+	Age:<input type="text" size="3" name:"age" required><br>
+	Gender <br>
+	<input type="radio" name="gender" value="male" required>Male
+	<input type="radio" name="gender" value="female" required>Female<br>
+	Date of Birth: <input type="date" name="dob" required>
+	</fieldset>
+	<fieldset>
+		<legend>Account Details</legend>
+	Username: <input type="text" name="uname" required><br>
+	Password: <input type="password" name="pword" required><br>
+	Type of Account:
+		<select name="acct_type" required>
+		<option></option>
+		<option value="admin">Admin</option>
+		<option value="mod">Moderator</option>
+		<option value="member">Member</option>
+		</select><br>
+	Email: <input type="email" name="email"> <br>
+	</fieldset>
+	<fieldset>
+		<legend> Other Information</legend>
+		About you: <br>
+		<textarea rows="10" cols="35" name"about" placeholder"Write anything here." required></textarea><br>
+		Hobbies and Interest:<br>
+		<input type="checkbox" name"HnI" value="soccer"> Soccer
+		<input type="checkbox" name"HnI" value="basketball"> Basketball
+		<input type="checkbox" name"HnI" value="bowling"> Bowling
+		<input type="checkbox" name"HnI" value="tennis"> Tennis
+	</fieldset>
+	<fieldset>
+		<input type="submit" value="Register">
+		<input type="reset" value="Clear">
+	</fieldset>
+	</form>
+	</body>
+</html>

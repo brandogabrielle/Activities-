@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>timer</title>
+    </head>
+    <body>
+        <center>
+        <h1 id="some_div"></h1>
+        </center>
+        <script>
+            var remainingTime = 3.
+            var elem = document.getElementById('some_div');
+            var timer = setInterval(countdown, 1000); // set the countdown to every second
+            function countdown(){
+                if (remainingTime == -1 ){
+                    clearTimeout(timer);
+                    alert("You died :P");
+                }
+                else{
+                    elem.innerHTML = remainingTime + ' left'; 
+                    remainingTime--; // we subtract the second each iteration
+                }
+            }
+        </script>
+    </body>
+</html>

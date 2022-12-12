@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: #e4e6eb;
+                margin: 0;
+                padding: 0;
+
+            }
+            .log{
+                padding-top: 40px;
+                border-radius: 10px;
+                border: 1px solid #ddd;
+                background-color:snow;
+                padding: 20px;
+                box-shadow: 0px 4px 4px 0px rgba(184, 178, 178, 0.53);
+                width: 350px;
+                height: 292px;
+                border: 120px;
+            }
+            .logo{
+                width:320px; 
+                height:130px;
+
+                
+            }
+            .img-with-text {
+            text-align: justify;
+            width: 400px;
+
+            }
+            .container{
+                display:flex;
+                width: 100%;
+                height: 52%;
+                padding-top: 10%;
+                padding-left: 25%;
+            }
+            .lang{
+            width: 100%;
+            height:28%;
+            background-color:snow;
+            margin: 0;
+            padding: 0;
+            }
+            .con{
+                width:700px;
+            }
+            .fbb{
+                padding-bottom: 0;
+                margin: 0;
+                border: 0;padding-right: 8%;
+            }
+            input[type=text],input[type=password]{
+                text-align: left;
+                padding: 16px 16px;
+                border: 1px solid grey;
+                border-radius: 7px;
+                font-size: 16px;
+                margin: 5px;
+                padding-right: 40%;
+            }
+
+             .yyy{
+                background-color: #1877f2;
+                border-radius: 7px;
+                color: white;
+                border:0;
+                font-size: 22px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 42%;
+                padding-right: 41%; 
+                margin-top: 3px;
+                margin-bottom: 7px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            button:hover{
+            background-color: #156cdd;
+            cursor: pointer;
+            }
+            .bott{
+            border-bottom: 1px solid rgb(185, 180, 180);
+            padding-top: 20px; 
+            padding-bottom: 3px;
+            width: 51%;
+            }
+            .bottt{
+
+            padding-bottom: 3px;
+            width: 51%;
+            }
+            .fs{
+                font-family:Arial, Helvetica, sans-serif; font-size: 13px;
+                color: darkgray;
+                text-align: left;
+            }
+            .fs:hover{
+                color: grey;
+                cursor: pointer;
+            }
+        </style>
+            <script>
+                function myFunction(){
+                    var attempt=3
+                    var username=document.getElementById('username').value;
+                    var password=document.getElementById('password').value;
+                    if(username == 'test' && password == 'test'){
+                        window.location.replace('afb.html');
+                    }
+                    else {
+                        attempt--;
+                        alert(attempt+' attempts left');
+                    }
+                    if(!attempt){
+                            document.getElementById('username').disable=true;
+                            document.getElementById('password').disable=true;
+                            document.getElementById('login').disable=true;
+                            return false;
+                        }
+                }
+            </script>
+    </head>
+    <body>
+        <center>
+        <div class="container">
+            <div  class="fbb">
+                <img class="logo "src="logofb.png" alt="facebooklogo" style="padding-right:180px;">
+                <p style="text-align:left; padding-left: 7%; margin:0;"><a style="font-size: 30; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Connect with friends and the world <br> around you in Facebook.</a></p>
+            </div>
+            <div class="log">
+                <form action="">
+                    <label for="username" > <input type="text" id="username" placeholder=" Email or Phone Number"></label>
+                    <label for="password"> <input type="password" id="password" placeholder=" Password"></label>
+                    <button type="button" onclick="myFunction()" id="login" class="yyy">Login</button>
+                    <input type="submit" value="Forgot Password?" style="color: #1877f2; background-color: transparent; border:0; border-bottom: 1px solid rgb(185, 180, 180); width: 100%; padding-bottom: 20px; font-size: 14px; cursor: pointer;"> 
+                    <button type="submit" style="background-color: rgb(113, 192, 34); color: white; font-size: 16px; font-weight: bold; border:0; padding: 15px 15px; margin-top: 23px; border-radius: 7px;">Create new account</button>
+                </form>
+            </div>
+        </div>
+         <div class="lang">
+            <div class="bott">
+            <small><p class="fs">English (US) &nbsp;   Filipino &nbsp;   Bisaya &nbsp;   Español &nbsp;   日本語 &nbsp;   한국어 &nbsp;   中文(简体) &nbsp;   العربية &nbsp;   Português(Brasil) &nbsp;   Français (France) &nbsp;   Deutsch &nbsp;   <button style="width: 30px;">&#43;</button> 
+            </p></small>
+            </div>
+            <div class="bottt">
+                <small><p class="fs"  style="margin-bottom: 0;">Sign up &nbsp; &nbsp;Login &nbsp;  &nbsp;Messenger &nbsp;  &nbsp;Facebook Lite &nbsp; &nbsp;Watch &nbsp; &nbsp;Places &nbsp; &nbsp;Games &nbsp; &nbsp;Marketplace &nbsp; &nbsp;Facebook Pay &nbsp; &nbsp;Jobs &nbsp; &nbsp;Oculus &nbsp; &nbsp;Portal &nbsp; &nbsp;Instagram &nbsp; &nbsp;Bulletin &nbsp; Local</p></small>
+                <small><p class="fs" style="margin-top: 4; margin-bottom: 0;">Fundraiser &nbsp; &nbsp;Services &nbsp; &nbsp;Voting Information &nbsp; &nbsp;Center &nbsp; &nbsp;Groups &nbsp; &nbsp;About &nbsp; &nbsp;Create Ad &nbsp; &nbsp; Create Page &nbsp; &nbsp;Developers &nbsp; &nbsp; Careers &nbsp; &nbsp;Privacy &nbsp; &nbsp;Cookies &nbsp; &nbsp; Ad Choices &nbsp; &nbsp;Terms</p></small>
+                <small><p class="fs" style="margin-top: 4;">Help</p></small>
+            </div>
+            <div class="bottt">
+                <p class="fs">Brando &copy;2022</p>
+            </div>
+        </div>
+    </center>
+    </body>
+</html>

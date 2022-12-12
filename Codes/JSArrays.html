@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title> JavaScript Arrays</title>
+        <style>
+            body{
+                font-family: "Century Gothic";
+            }
+        </style>
+    </head>
+<body>
+    <h1> This is an array</h1>
+    <h3 id="disp"></h3>
+
+    <script>
+        var cars = [ "BMW", "TOYOTA", "MITSUBISHI"];
+
+        document.getElementById("disp").innerHTML = cars;
+    </script>
+
+    <p> JavaScript Array elements can be accesed 
+        via index numbers (starting from 0). </p>
+   
+        <h3 id="disp2"></h3>
+    <script>
+        document.getElementById("disp2").innerHTML = cars [1];
+    </script>
+
+    <p> And we can change one of its data via index numbers as well.</p>
+    <h3 id="disp3"></h3>
+    <script>
+        cars[0] = "HONDA";
+        document.getElementById("disp3").innerHTML = cars;
+    </script>
+
+    <p>We can also loop and array by using the For loop.</p>
+    <h3 id="disp4"></h3>
+    <script>
+        var text, clen, i;
+        clen = cars.length;
+
+        text = "<ul>";
+        for (i=0;i<clen;i++){
+            text += "<li>"+ cars [i]+ "</li>";
+        }
+        text += "<ul>";
+        document.getElementById("disp4").innerHTML = text;
+    </script>
+</body>
+</html>

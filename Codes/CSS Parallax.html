@@ -1,0 +1,102 @@
+<html>
+<head>
+<title> A Simple Parallax Scrolling Effect</title>
+
+<style>
+body{
+	margin:0;
+	background-color:black;
+	font-family: 'century gothic';
+}
+
+.label {
+	margin:auto;
+	text-align:center;
+	padding:5px;
+	background-color:rgba(96,96,96,75%);
+	width:640px;
+	color:white;
+}
+
+.divider {
+	height:5%;
+	background-color:lightgrey;
+	font-size:22px;
+	padding:50px;
+	text-align:center;
+}
+
+.parallax{
+	/* The Image used */
+	background-image: url('starrynight.jpg');
+	
+	/* Full height */
+	height:70%;
+	padding-top:20%;
+	
+	/* Create the parallax scrolling effect */
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: cover;
+	text-align:center;
+}
+.parallax2 {
+	/* the image used */
+	background-image: url('screampainting.jpg');
+	
+	/* Full height */
+	height:70%;
+	padding-top:20%;
+	
+	/* Create the parallax scrolling effect */
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: cover;
+	text-align:center;
+}
+.parallax3 {
+	/* the image used */
+	background-image: url('nighthawks.jpg');
+	
+	/* Full height */
+	height:70%;
+	padding-top:20%;
+	
+	/* Create the parallax scrolling effect */
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: cover;
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="parallax">
+	
+	<div class="label">
+		<h1>Scroll down to view the Parallax Effect</h1>
+	</div>
+	
+</div>
+
+<div class="parallax2">
+	<div class="label">
+		<h1> Nice isn't it?</h1>
+	</div>
+</div>
+
+<div class="parallax3">
+	<div class="label">
+		<h1>Cool</h1>
+	</div>
+</div>
+</body>
+</html>
+
+/* <div class="divider">
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+ */

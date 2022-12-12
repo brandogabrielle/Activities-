@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>A simple calculator</title>
+
+<style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        background-image: radial-gradient(rgba(0, 0, 255, 0.432),rgba(94, 16, 94, 0.74),rgb(0, 0, 0) );
+    }
+    .container{
+        padding-top: 40px;
+        border-radius: 10px;
+        border: 1px solid rgb(32, 38, 110);
+        background-color: rgba(255, 255, 255, 0.829);
+        padding: 20px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 53%);
+        width: 300px;
+        margin: 120px auto;
+    }
+    table{
+        margin: auto;
+        width: 295px;
+        max-width: 325px;
+        height: 325;
+        text-align: center;
+        border-radius: 4px;
+        padding-right: 10px;
+    }
+
+    td{
+        width:25%;
+    }
+
+    button {
+        outline: 0;
+        position: relative;
+        border: 0;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        box-shadow: 0 4px rgba(0, 0, 0, 2);
+        margin-bottom: 10px;
+    }
+    button:hover{
+        border: 0 solid #000;
+        color: red;
+        background-color: lightgray;
+        border-radius: 4px;
+        width: 100%;
+        height: 50px;
+        float:left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 0 4px #b0d2cf;
+    }
+    #inputLabel{
+        width: 265px;
+        max-width: 265px;
+        font-size: 38px;
+        height: 50px;
+        text-align: right;
+        vertical-align: bottom;
+        background-color: #bcbd95;
+        padding-right: 10px; 
+    }
+
+    .operator{
+        background-color: #cee9ea;
+        position: relative;
+    }
+    .operator:hover{
+        background-color: #cee9ea;
+    }
+    .clear{
+        position: relative;
+        display: block;
+        background-color: #ff9fa8;
+    }
+    .clear:hover{
+        background-color: #F297A0;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <table>
+        <tr>
+            <td colspan="4" id="inputLabel">0</td>
+        </tr>
+        <tr>
+            <td colspan="3"> <button class="clear" onclick="pushBtn(this);">AC</button></td>
+            <td><button class="operator" onclick="pushBtn(this);">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pushBtn(this);">7</button></td>
+            <td><button onclick="pushBtn(this);">8</button></td>
+            <td><button onclick="pushBtn(this);">9</button></td>
+            <td><button class="operator" onclick="pushBtn(this);">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pushBtn(this);">4</button></td>
+            <td><button onclick="pushBtn(this);">5</button></td>
+            <td><button onclick="pushBtn(this);">6</button></td>
+            <td><button class="operator" onclick="pushBtn(this);">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pushBtn(this);">1</button></td>
+            <td><button onclick="pushBtn(this);">2</button></td>
+            <td><button onclick="pushBtn(this);">3</button></td>
+            <td><button class="operator" onclick="pushBtn(this);">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <button onclick="pushBtn(this);">0</button></td>
+            <td><button onclick="pushBtn(this);">.</button></td>
+            <td><button class="operator" onclick="pushBtn(this);">=</button></td>
+        </tr>
+    </table>
+</div>
+<script>
+    var inputLabel = document.getElementById('inputLabel');
+
+    function pushBtn(obj){
+        var pushed = obj.innerHTML; 
+
+        if (pushed == '='){
+            // calculate
+            inputLabel.innerHTML= eval(inputLabel.innerHTML);
+        } else if (pushed == 'AC'){
+            // All clear
+            inputLabel.innerHTML= '0';
+        }else{
+            if (inputLabel.innerHTML=='0'){
+                inputLabel.innerHTML=pushed;
+            }else{
+                inputLabel.innerHTML+= pushed;
+            }
+        }
+        }
+    
+</script>
+</body>
+</html>

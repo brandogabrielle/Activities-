@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>forloop</title>
+        <style>
+            body{
+                font-family: "century gothic";
+            }
+        </style>
+        <script>
+            function LoopFor(){
+                var text= "";
+                var i;
+                for( i = 1; i < 11; i++)
+                {
+                    text += "Looping number " + i + "<br>";
+                }
+                document.getElementById("result").innerHTML = text;
+            }
+        </script>
+    </head>
+<body>
+    <p>Click the button to loop through a block of code five times.</p>
+
+    <button onclick="LoopFor()">Try it </button>
+
+    <h2 id="result"></h2>
+</body>
+
+
+</html>

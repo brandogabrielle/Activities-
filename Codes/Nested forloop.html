@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Nested forloop</title>
+<style>
+body{
+    font-family: "century gothic";
+}
+</style>
+<script>
+function myFunction(){
+    var text = "";
+    var i, j;
+
+    for( i = 1; i < 11; i++){
+        text += "<br>" + "i = " + i + ", j =  ";
+
+        for (j = 10; j < 15; j++){
+            document.getElementById("demo").innerHTML= text += j + " "; 
+        }
+    }
+}
+</script>
+</head>
+<body>
+
+    <p>In this example, we have two loops. Because there is one loop that is inside the other,<br>
+        we call this a nested loop. The first loop is often called an "outer loop", and the second<br>
+        is often called the "inner loop" because it is inside the first, outer loop </p>
+
+    <p> The outer loop executes first, and for each time the outer loop is executed, <br>
+    the inner loop will also be executed.</p>
+
+    <button onclick="myFunction()"> Try it </button>
+    <h3 id="demo"></h3>
+</body>
+</html>

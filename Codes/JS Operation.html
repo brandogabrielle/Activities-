@@ -1,0 +1,46 @@
+<html>
+<body>
+
+<h2> JavaScript Operators</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<h4> Assign 5 to x, and display the value of the comparison (x > y).</h4>
+
+<p id="demo3"></p>
+
+<h4> Assign 5 to x, and display the value of the comparison (x < y).</h4>
+
+<p id="demo4"></p>
+
+<h4> The AND operator (&&) returns true if both expressions are true, otherwise it returns to false.</h4>
+
+<p id="demo5"></p>
+
+<h4> The OR operator (||) returns true if both expressions are true, otherwise it returns to false.</h4>
+
+<p id="demo6"></p>
+<script>
+var x = 5;
+var y = 2;
+var z = x * y ;
+var s = x + y;
+var sd = x * y -s ;
+document.getElementById("demo").innerHTML = s;
+document.getElementById("demo1").innerHTML = z;
+document.getElementById("demo2").innerHTML = sd;
+document.getElementById("demo3").innerHTML = (x > y);
+document.getElementById("demo4").innerHTML = (x < y);
+document.getElementById("demo5").innerHTML = 
+(x < 10 && y > 1) + "<br>" +
+(x < 10 && y < 1) ;
+document.getElementById("demo6").innerHTML =
+(x == 5 || y== 5) + "<br>" +
+(x == 6 || y== 0) + "<br>" +
+(x == 0 || y== 3) + "<br>" +
+(x == 6 || y== 3);
+</script>
+</body>
+</html>

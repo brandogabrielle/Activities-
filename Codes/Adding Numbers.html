@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Basic Programming</title>    
+        <style>
+            body{
+                font-family: 'Century Gothic';
+                background-image: radial-gradient(yellow,red);
+                height: 70%;
+                padding-top:15%;
+            }
+            div{
+                padding-top: 40px;
+                border-radius:10px;
+                border: 1px solid #ddd;
+                background-color: rgba(221, 221, 221, 53%);
+                padding: 20px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 53%);
+                width: 400px;
+                height: 250px;
+            }
+            input[type=text]{
+                background-color: rgba(221, 221, 221, 0%);
+                border: 0;
+                border: 1px solid #585757;
+                width: 40px;
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            button {
+                border-radius: 12px;
+                border:0;
+                padding: 12px;
+                font-size: 20px;
+            }
+            button:hover{
+                background-color:#6699cc;
+                color:white;
+                border: 0;
+            }
+        </style>
+        <script>
+            function opera(){
+                var x = parseInt(document.getElementById("num1").value);
+                var y = parseInt(document.getElementById("num2").value);
+
+                var sum = x+y; 
+
+                document.getElementById("demo").innerHTML = 
+                "the sum of " + x + " and " + y + " is " + sum; 
+            }
+        </script>
+    </head>
+<body>
+    <center>
+        <div>
+            <h2>Please input two numbers...</h2> 
+             here: <input type = "text" id="num1"> and here: <input type= "text" id ="num2">
+             <br><br>
+
+            <button type="button" onclick="opera()"> COMPUTE</button>
+            
+            <h3 id="demo"></h3>
+        </div>
+    </center>
+</body>
+</html>

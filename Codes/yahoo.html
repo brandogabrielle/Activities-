@@ -1,0 +1,108 @@
+<html>
+<head>
+<style>
+ body{ 
+ background-color:white;
+ font-family:'century gothic';
+ }
+ div {
+ padding-top: 40px;
+ background-color: white;
+ padding: 20px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,53%);
+ width: 450px;
+ height: 650px;
+ }
+ 
+ input[type=text],input[type=password], input[type=tel],select {
+ padding: 12px 12px;
+ border: 0;
+ border-bottom: 1px solid grey;
+ font-size: 16px;
+ }
+
+input[type=submit]{
+ width: 90%;
+ background-color: #259BDA;
+ border: none;
+ padding: 20px;
+ font-size:20;
+ color:white;
+ border-radius: 40px;
+ margin: 4px 2px;
+ cursor:pointer;
+ }
+
+select {
+ background: transparent;
+  color: inherit;
+  font: inherit;
+ }
+
+
+</style>
+</head>
+<body>
+<p style="margin-right:6%; margin-top:3%; float:right" ><a href="yahoo.html"> Help </a></p>	
+<a href="yahoo.html"><img src="yahoo.png" width="150"height="100" align="top-left" ></a>
+<center>
+		
+	<div>
+		<p><font size="6">Sign Up</font></p>
+		<p><font size="4">Create a Yahoo email address</font></p>
+		<form>
+		<label> <input type="text" name="firstname" placeholder="First Name">
+		</label>
+		<label> <input type="text" name="lastname" placeholder="Last Name">
+		</label> 
+		<label> <pre><input type="text" name="email" placeholder="Email address                                                @yahoo.com" size="48"></pre>
+		</label>
+		<p align="left" style="margin-left:1%"><a href="yahoo.html"><small>I want to use my current email address</small></a></p>
+		<label> <input type="password" name="password" placeholder="Password" size="48">
+		</label>
+		<label>
+		<select name="countrycode">
+		<option data-countryCode="AU" value="61" size="20">Australia (+61)</option>
+		<option data-countryCode="BN" value="673">Brunei (+673)</option>
+		<option data-countryCode="EG" value="20">Egypt (+20)</option>
+		<option data-countryCode="FR" value="33">France (+33)</option>
+		<option data-countryCode="IN" value="91">India (+91)</option>
+		<option data-countryCode="PH" value="63">Philippines (+63)</option>
+		<option data-countryCode="RU" value="7">Russia (+7)</option>
+		<option data-countryCode="SA" value="966">Saudi Arabia (+966)</option></select>
+		</label>
+		<label> <input type="text" name="number" placeholder="Mobile phone number" size="23">
+		</label>
+		<label> 
+		<select name="birthmonth">
+		<option data-birthmonth="jan" Value="January">January</option>
+		<option data-birthmonth="feb" Value="February">February </option>
+		<option data-birthmonth="mar" Value="March">March </option>
+		<option data-birthmonth="apr" Value="April">April </option>
+		<option data-birthmonth="may" Value="May">May</option>
+		<option data-birthmonth="jun" Value="June">June</option>
+		<option data-birthmonth="jul" Value="July">July</option>
+		<option data-birthmonth="aug" Value="August">August</option>
+		<option data-birthmonth="sep" Value="September">September</option>
+		<option data-birthmonth="oct" Value="October">October</option>
+		<option data-birthmonth="nov" Value="November">November</option>
+		<option data-birthmonth="dec" Value="December">December</option>
+		</select>
+		</label>
+		<label> <input type="tel" name="day" placeholder="Day" size="12">
+		</label>
+		<label> <input type="tel" name="year" placeholder="Year" size="11">
+		</label>
+		<label>
+		<input type="text" id="gender" placeholder="Gender(optional)" size="48">
+		</label>
+		<p>By clicking "Continue", you agree to the <a href="yahoo.html">Terms</a> <br> and <a href="yahoo.html">Privacy Policy </a></p>
+		<input type="submit" value="Continue">
+		<br>
+		<br>
+		<p>Already have an account? <a href="yahoo.html">Sign in</a></p>
+		</form>
+	</div>
+	</center>
+</body>
+</html>

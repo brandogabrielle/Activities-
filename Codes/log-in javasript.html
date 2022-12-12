@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Simple Log-in Validation</title>
+        <style>
+            body{
+                background-image: url(starrynight.jpg);
+                background-position: top;
+                background-size: cover;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding-top: 130px;
+            }
+            div{
+                padding-top: 40px;
+                border-radius: 10px;
+                border: 1px solid #ddd;
+                background-color: rgba(221, 221, 221, 53%);
+                padding: 20px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 53%);
+                width: 400px;
+                height: 250px;
+            }
+            input[type=text], input[type=password]{
+                background-color: rgba(221, 221, 221, 0%);
+                border: 0;
+                border-bottom: 1px solid #585757;
+                width: 180px;
+                padding: 4px;
+                font-size: 16px;
+            }
+            
+            button{
+                border-radius:12px ;
+                border: 0;
+                padding: 10px;
+                font-size: 14px;
+            }
+            button:hover{
+                background-color: #6699cc;
+                color: white;
+                border: 1px solid white;
+            }
+        </style>
+        <script>
+            function myFunction(){
+                var x, y, text;
+
+                x = document.getElementById("uname").value;
+                y=document.getElementById("pword").value;
+
+                if(x == 'test' && y == 'test123'){
+                    text = "Log in Complete";
+                    window.location.replace("timer.html");
+                }else{
+                    document.getElementById("uname").disabled= true;
+                    document.getElementById("pword").disabled=true;
+                text = "Invalid Username or Password, Forms has been locked.";
+                }
+                document.getElementById("demo").innerHTML=text;
+            }
+        </script>
+    </head>
+<body>
+    <center>
+        <h2>Basic Log-in</h2>
+        <div>
+            <p>Please input a valid username and password:</p>
+            Username:<input type="text" id="uname"><br><br>
+            &nbsp;Password:<input type="password" id="pword"><br><br>
+            <button type="button" onclick="myFunction()" id="login">Submit</button>
+            <h3 id="demo"></h3>
+        </div>
+    </center>
+</body>
+</html>

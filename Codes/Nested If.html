@@ -1,0 +1,44 @@
+<html>
+<head>
+    <style>
+        body{
+            font-family: "century gothic";
+
+        }
+    </style>
+        <title> JavasScript Nested IF Statement</title>
+</head>
+    <h1>JavasScript Nested IF Statement</h1>
+<body>
+    <script>
+        function goBack(){
+            document.location.reload(true);
+        }
+        function emp(){
+            var a = document.getElementById("age").value;
+            if( a < 18 )
+        {
+            document.write("<b> You are a minor.</b>");
+            document.write("<br> Not eligible to Work ");
+            document.write("<button type='button' onclick='goBack()'> Go back </button>");
+        }
+        else
+        {
+            if (a >=18 && a <= 60 )
+            {
+                document.write("<b> You are eligible to Work ");
+                document.write("<br/> Please fill in your details and apply");
+                document.write("<button type='button' onclick='goBack()'>Go Back </button>");
+            }
+            else
+                document.write("<b> You are too old to work as per the Government rules </b> ");
+                document.write("<br/> Please Collect your pension!");
+                document.write("<button type='button' onclick='goBack()'> Go Back </button>");
+            }
+        }
+        
+    </script>
+<input type="text" id="age">
+<button type="button" onclick="emp();">VALIDATE</button>
+</body>
+</html>

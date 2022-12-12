@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>JavaScript Basic </title>
+	
+	<script src="first.js"> </script>
+	
+	<script>	
+		function turnON() {
+			document.body.style.backgroundColor="white";
+			document.getElementById('myImage').src='pic_bulbon.png'
+		}
+		
+		function turnOFF() {
+			document.body.style.backgroundColor="gray";
+			document.getElementById('myImage').src='pic_bulboff.png'
+		}
+		
+		function changeFONT() {
+			document.getElementById("demo2").style.font= 'italic bold 20px Calibri";
+			document.getElementById("demo2").style.color="red";
+		}
+		
+		function blue2() {
+			document.getElementById("demo2").style.color="blue";
+		}
+	</script>	
+	
+	<style>
+	body {
+		font-family: 'Century Gothic';
+	}
+	</style>
+</head>
+<body bgcolor="gray">
+<center>
+	<h2> What Can JavaScript Do?</h2>
+	<p> JavaScript can change HTML attribute values.</p>
+	<p> In this case JavaScript changes the value of<br> the src (source) attribute of an image.</p>
+	<button onclick="turnON()"> Turn on the light </button>
+	<img id="myImage" src="pic_bulboff.png" style="width:100px">
+	<button onclick="turnOFF()"> Turn off the light </button>
+	<br><br>
+	<button type="button" onclick="showDate()">
+	Click me to display Date and time.</button>
+	<h4 id="demo"></h4>
+	<p id="demo1"> JavaScript can hide and show HTML elements.</p>
+	<button type="button" onclick="document.getElementById('demo1').style.display='none'">Hide </button>
+	<button type="button" onclick="document.getElementById('demo1').style.display='block'">SHOW </button>
+	<p id="demo2"> JavaScript can change the stylle (CSS) of an<b id="test"> HTML Element</b></p>
+	<button type="button" onclick="changeFONT()"> Change font and Color</button><br>
+	<button type="button" onclick="blue2()" style="padding:5;"> Blue text </button>
+</center>
+</body>
+</html>
